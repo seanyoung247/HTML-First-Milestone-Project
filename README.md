@@ -1,11 +1,21 @@
-# Your Project's Name
+# PC Flow
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+A website for showcasing custom water-cooled PCs I have built and offering system building services. Also provides an overview of watercooling, it's advantages and uses, and tips on building and maintaining watercooled systems.
  
 ## UX
  
+The website is aimed at PC enthusiasts interested in PC watercooling. Both novices who lack the expertise to water cool their own equipment and more experienced builders looking for inspiration. It aims to educate website users on the purpose of water cooling and how to create their own cooling systems. Further, it aims to give users without the confidence or skillset to build their own systems the ability to get systems built for them.
+
+As a novice user, I want to learn more about water cooling, so that I can decide if it's right for me.
+
+As a potential customer, I want to see examples of previous work, so I know what I'll get.
+
+As a novice builder, I want tips on how to build water cooling systems, so I can build my own.
+
+As an experienced builder, I want to see showcase examples of other people's builds, so that I can gain inspiration for my own.
+
+
+
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
