@@ -1,6 +1,6 @@
 # PC Flow 
 
-![Image of site title and logo](/Source files/Artwork/Dark Logo.png) - Not made yet, but will be here when it is.
+![Image of site title and logo](Source files/Artwork/Dark-Logo.png?raw=true)
 
 PC Flow is a website offering services building bespoke custom water-cooled PCs and conversions of pre-built machines.
  
