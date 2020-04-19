@@ -1,6 +1,6 @@
 # PC Flow 
 
-![Image of site title and logo](Source/Artwork/Dark-Logo.png?raw=true)
+![Image of site title and logo](Source/Artwork/logo.png?raw=true)
 
 PC Flow is a website offering services building bespoke custom water-cooled PCs and conversions of pre-built machines.
  
@@ -43,4 +43,4 @@ Nothing to deploy yet...
 
 ## Credits
 
-None
+Logo/Title text based on 01Digitall font by David Chung (free licence) and Flow by Matt Chisholm (Free licence).
