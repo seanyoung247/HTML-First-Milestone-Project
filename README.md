@@ -43,4 +43,5 @@ Nothing to deploy yet...
 
 ## Credits
 
+Logo/Title artwork by Sean Young.
 Logo/Title text based on 01Digitall font by David Chung (free licence) and Flow by Matt Chisholm (Free licence).
