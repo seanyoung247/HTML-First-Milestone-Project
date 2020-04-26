@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+/*
+ * GLOBAL STYLES
+ */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Page header styles
+ */
+.site-header {
+    background-color: #555;
+    color: #EEE;
+}
+
+.site-logo {
+    display: block;
+    background: url("../images/logo-sm-db.png") no-repeat;
+    width: 120px;
+    height: 42px;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav {
+     /* Centers horizontally */
+    margin: auto;
+    text-align: center;
+}
+
+.navbar-toggle {
+    position: absolute;
+    background: red;
+    
+    right: 15px;
+
+     /* Centers the menu toggle vertically */
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*
+ * PAGE SPECIFIC STYLES
+ */
+
+/*
+ * Media Queries
+ */
+ /* XS >250 */
+ /* XS -> SM >450px */
+@media (min-width: 450px) {
+    .site-logo {
+        display: block;
+        background: url("../images/logo-lg-db.png") no-repeat;
+        width: 320px;
+        height: 112px;
+    }
+}
+ /* SM >576px */
+ /* MD >768px */
+ /* LG >992px */
+ @media (min-width: 992px) {
+     .navbar-toggle {
+         display: none;
+     }
+ }
+ /* XL >1200px */
