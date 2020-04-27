@@ -15,26 +15,33 @@
 <body>
 	<!--<header class="container-fluid site-header">-->
     <header class="site-header">
-
+         <!-- logo and menu button -->
         <div class="row no-gutters">
             <div class="col-12 no-gutters navbar-bg">
                 <a href="index.html" class="navbar-brand"><span class="site-logo"></span></a>
 
                 <a href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbarMenuToggle"
                     aria-controls="navbarMenuToggle" aria-expanded="false" aria-label="Toggle navigation"> 
+                    
+                    <svg class="nav-menu-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+                        <g id="menu_icon" data-name="menu_icon">
+                            <line class="nav-menu_icon_line" x1="50" y1="50" x2="450" y2="50"/>
+                            <line class="nav-menu_icon_line" x1="50" y1="250" x2="450" y2="250"/>
+                            <line class="nav-menu_icon_line" x1="50" y1="450" x2="450" y2="450"/>
+                        </g>
+                    </svg>
 
-                    <!-- BUTTON ICON HERE -->
-
-                    MENU
                 </a>
             </div>
         </div>
+         <!-- /logo and menu button -->
 
+         <!-- menubar -->
         <div class="navbar-wrapper">
             <nav class="navbar navbar-expand-md">
                 <div class="collapse navbar-collapse" id="navbarMenuToggle">
                     <ul class="navbar-nav mr-auto ">
-                        <li class="nav-item nav-item-first active">
+                        <li id="nav-item-first" class="nav-item active">
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
@@ -47,6 +54,8 @@
                 </div>
             </nav>
         </div>
+         <!-- /menubar -->
+
 	</header>
 
 	<section class="site-content">
