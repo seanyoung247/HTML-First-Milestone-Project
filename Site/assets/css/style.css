@@ -12,6 +12,11 @@
     --dark-color: #1a1a1a;
     --light-trans: rgba(242,242,242,0.75);  /*f2f2f2bf*/
     --dark-trans: rgba(26,26,26,0.75);      /*1a1a1abf*/
+    
+    --facebook-color: #4267B2;
+    --twitter-color: #55ACEE;
+    --instagram-color: #833AB4;
+    --youtube-color: #FF0000;
 }
 
  /* No default margins or padding */
@@ -45,9 +50,6 @@ body {
 /*
  * Navbar
  */
-.navbar {
-}
-
 .navbar-bg {
     background-color: var(--dark-trans);
 }
@@ -108,13 +110,17 @@ body {
     color: var(--dark-color);
 }*/
 
+.nav-link:hover {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
 .nav-link {
     width: 100%;
     margin: 0px;
 
     color: var(--light-color);
 }
-
 
  /*
   * Content section
@@ -133,6 +139,77 @@ body {
 .testContentShift {
     padding: 10px 20px 10px 10px;
 }
+
+ /*
+  * Footer styles
+  */
+.site-footer {
+    background-color: var(--dark-color);
+    min-height: 100px;
+}
+
+.media-icons-wrapper {
+    float: right;
+}
+
+.media-icons-list {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.media-icons-list li {
+    float: left;
+    padding: 5px;
+}
+
+.media-icons-list li a {
+    display: block;
+}
+
+.sm-facebook_icon,
+.sm-twitter_icon,
+.sm-instagram_icon,
+.sm-youtube_icon {
+    width: 25px;
+    height: 25px;
+}
+
+.facebook_icon,
+.twitter_icon,
+.youtube_icon {
+    stroke: none;
+    fill: var(--light-color);
+}
+
+.sm-inst-grad1,
+.sm-inst-grad2,
+.sm-inst-grad3,
+.sm-inst-grad4,
+.sm-inst-grad5 {
+    stop-color: var(--light-color);
+}
+
+
+ /* Child path needs to be styled, but hover event needs to be on container.
+        Otherwise hover doesn't work on blank part of path. */
+.sm-facebook_icon:hover .facebook_icon {
+    fill: var(--facebook-color);
+}
+
+.sm-twitter_icon:hover .twitter_icon {
+    fill: var(--twitter-color);
+}
+
+.sm-youtube_icon:hover .youtube_icon {
+    fill: var(--youtube-color)
+}
+
+ /* Instagram icon uses gradients for colour */
+.sm-instagram_icon:hover .sm-inst-grad1 {stop-color: #515BD4;}
+.sm-instagram_icon:hover .sm-inst-grad2 {stop-color: #8134AF;}
+.sm-instagram_icon:hover .sm-inst-grad3 {stop-color: #DD2A7B;}
+.sm-instagram_icon:hover .sm-inst-grad4 {stop-color: #F58529;}
+.sm-instagram_icon:hover .sm-inst-grad5 {stop-color: #FEDA77;}
 
 /*
  * PAGE SPECIFIC STYLES
