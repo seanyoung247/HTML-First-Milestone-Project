@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /*
@@ -29,15 +28,21 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+ /* Prevents content getting too wide while remaining fluid below 1200px.
+    I prefer this behaviour to the container class */
+.content-pane {
+    max-width: 1200px;
+     /* Centres horizontally but not vertically */
+    margin: 0 auto 0 auto;
+}
+
  /*
-  * Page header styles
+  * Header styles
   */
 .site-header {
     position: absolute;
-    top: 0;
-    width:100%;
-
-    color: var(--light-color);
+    z-index: 99;
+    background-color: var(--dark-trans);
 }
 
 .site-logo {
@@ -48,30 +53,18 @@ body {
 }
 
  /*
-  * Navbar
+  * Navbar styles
   */
-.navbar-bg {
-    background-color: var(--dark-trans);
-}
-
-.navbar-wrapper {
-    background-color: var(--dark-trans);
+.navbar-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .navbar-nav {
+    margin: auto;
     padding: 0 10%;
     text-align: left;
-}
-
-.navbar-toggle {
-    position: absolute;
-    
-    right: 15px;
-
-     /* Centers the menu toggle vertically in the header */
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .nav-menu-icon {
@@ -85,6 +78,18 @@ body {
     stroke-linecap: square; /*round*/ /*square*/
     stroke-miterlimit: 10;
     stroke-width: 100px;
+}
+
+.nav-link:hover {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+.nav-link {
+    /*width: 100%;*/
+    margin: 0px;
+
+    color: var(--light-color);
 }
 
 #nav-item-first {
@@ -105,34 +110,33 @@ body {
     border-color: var(--light-color);
 }
 
-/*.nav-item .active {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-}*/
-
-.nav-link:hover {
-    color: var(--light-color);
-    background-color: var(--dark-color);
-}
-
-.nav-link {
-    width: 100%;
-    margin: 0px;
-
-    color: var(--light-color);
-}
-
  /*
   * Content section styles
   */
-
 .site-hero-image {
-    width: 100%;
     height: 200px;
-    background-color: red;
+    
+    background: url("../images/hero-sunrise-sm.jpg") top no-repeat;
+    background-size: cover;
 }
 
-.site-content {
+.site-content-section {
+    padding: 0;
+    min-height: 200px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+ /* If site-content-sections are children of .site-content-list they will 
+    swap background and foreground colours automatically */ 
+.site-content-list .site-content-section:nth-child(odd){
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.site-content-list .site-content-section:nth-child(even){
+    background-color: var(--light-color);
+    color: var(--dark-color);
 }
 
  /*
@@ -144,7 +148,8 @@ body {
 }
 
 .media-icons-wrapper {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .media-icons-list {
@@ -184,9 +189,8 @@ body {
     stop-color: var(--light-color);
 }
 
-
- /* Child path needs to be styled, but hover event needs to be on container.
-        Otherwise hover doesn't work on blank part of path. */
+ /* Child path needs to be styled, but hover event needs to be on the icon's container.
+        Otherwise hover won't work on blank part of path. */
 .sm-facebook_icon:hover .facebook_icon {
     fill: var(--facebook-color);
 }
@@ -206,19 +210,11 @@ body {
 .sm-instagram_icon:hover .sm-inst-grad4 {stop-color: #F58529;}
 .sm-instagram_icon:hover .sm-inst-grad5 {stop-color: #FEDA77;}
 
-/*
- * PAGE SPECIFIC STYLES
- *  - Styles only applied to specific pages.
- */
-
-/*
- * MEDIA QUERIES
- */
- /* XS >250px - Really small phone screens*/
- /* XS -> SM >450px */
+ /*
+  * Media Queries
+  */
 @media (min-width: 450px) {
     .site-logo {
-        display: block;
         background: url("../images/logo-lg-db.png") no-repeat;
         width: 320px;
         height: 112px;
@@ -226,20 +222,22 @@ body {
 
     .site-hero-image {
         height: 500px;
+
+        background: url("../images/hero-sunrise-lg.jpg") top no-repeat;
+        background-size: cover;
     }
 }
- /* SM >576px - Large phone screens/small tablets */
- /* MD >768px - Tablets */
+
 @media (min-width: 768px) {
     .navbar-toggle {
          display: none;
-     }
+    }
+
+    .navbar-wrapper {
+        justify-content: center;
+    }
 
     .navbar-nav {
-         /* Centers navbar horizontally */
-        margin: auto;
-        width: auto;
-
         text-align: center;
     }
 
@@ -269,5 +267,3 @@ body {
         border-color: var(--light-color);
     }
 }
- /* LG >992px - large tablets/Small laptop/desktop screens */
- /* XL >1200px - Laptop/desktop screens */
