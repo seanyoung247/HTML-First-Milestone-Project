@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /*
- * TODO: Smaller font sizes for small screens.
+ * TODO: Vary font sizes for different screen sizes.
  *       Global scaling of elements on really small screens?
  */
 
@@ -113,7 +113,7 @@ body {
   */
 .site-hero-image {
     height: 50vh; /*200px;*/
-    background: url("../images/hero-sunrise-sm.jpg") top no-repeat;
+    background: url("../images/hero-sunrise-sm.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -123,13 +123,12 @@ body {
     color: var(--dark-color);
 }
 
- /* If site-content-sections are children of .site-content-list they will 
+ /* If site-content-sections are children of site-content-list they will 
     swap background and foreground colours automatically */ 
 .site-content-list .site-content-section:nth-child(odd){
     background-color: var(--light-color);
     color: var(--dark-color);
 }
-
 .site-content-list .site-content-section:nth-child(even){
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -250,7 +249,7 @@ body {
     .site-hero-image {
         /*height: 350px;*/
 
-        background: url("../images/hero-sunrise-lg.jpg") top no-repeat;
+        background: url("../images/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
         background-size: cover;
     }
 }
