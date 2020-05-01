@@ -19,8 +19,8 @@
                 <a href="index.html" class="navbar-brand"><span class="site-logo"></span></a>
             </div>
             <div class="col-6 navbar-toggle-wrapper">
-                <a href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbarMenuToggle"
-                    aria-controls="navbarMenuToggle" aria-expanded="false" aria-label="Toggle navigation"> 
+                <a href="#" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenuToggle"
+                    aria-controls="navbarMenuToggle" aria-expanded="false" aria-label="Toggle navigation">
 
                     <svg class="nav-menu-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
                         <g id="menu_icon" data-name="menu_icon">
@@ -29,6 +29,7 @@
                             <line class="nav-menu_icon_line" x1="50" y1="450" x2="450" y2="450"/>
                         </g>    
                     </svg>
+
                 </a>
             </div>
         </div>
@@ -45,7 +46,7 @@
                             <a class="nav-link" href="showcase.html">Showcase</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -59,17 +60,41 @@
             <div class="col-12 site-hero-image"></div>
         </div>
         <div class="row">
-            <div id="water-cooling-intro" class="col-12 site-content-section">
-                <div class="form-wrapper content-pane">
-                    <form class="contact-form">
-                        <label class="form-label" for="first-name">First Name:</label>
-                        <input class="form-textbox" type="text" id="first-name" name="first-name">
-                        <label class="form-label" for="last-name">Last Name:</label>
-                        <input class="form-textbox" type="text" id="last-name" name="last-name">
-                        <label class="form-label" for="email">email:</label>
-                        <input class="form-textbox" type="email" id="email" name="email">
-                    </form>
-                </div>
+            <div class="col-12 site-content-section">
+                <form class="contact-form form-pane">
+                    <div class="row form-group">
+                        <div class="col-12 col-md-2"><label class="form-label" for="first-name">First Name:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="text" id="first-name" name="first-name" required="true"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2"><label class="form-label" for="last-name">Last Name:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="text" id="last-name" name="last-name" required="true"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2"><label class="form-label" for="email">E-mail:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="email" id="email" name="email" required="true"></div>
+                    </div>                        
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2"><label class="form-label" for="reason">Reason:</label></div>
+                        <div class="col-12 col-md-10">
+                            <select class="form-control" id="reason" name="reason">
+                                <option>General Enquiry</option>
+                                <option>Custom System Build</option>
+                                <option>System Upgrade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <textarea class="form-message-box" name="message" id="message">Please type your message here.</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <div class="col-12">
+                            <button type="submit" class="btn form-button">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
