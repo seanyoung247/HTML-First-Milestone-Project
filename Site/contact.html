@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+   	<link rel="stylesheet" href="assets/css/style.css" type="text/css"> 
+
+	<title>PC Flow</title>
+</head>
+<body>
+
+    <header class="container-fluid site-header">
+        <!-- logo and menu toggle -->
+        <div class="row content-pane">
+            <div class="col-6 logo-wrapper">
+                <a href="index.html" class="navbar-brand"><span class="site-logo"></span></a>
+            </div>
+                <div class="col-6 navbar-toggle-wrapper">
+                <a href="#" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenuToggle"
+                    aria-controls="navbarMenuToggle" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <svg class="nav-menu-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+                        <g id="menu_icon" data-name="menu_icon">
+                            <line class="nav-menu_icon_line" x1="50" y1="50" x2="450" y2="50"/>
+                            <line class="nav-menu_icon_line" x1="50" y1="250" x2="450" y2="250"/>
+                            <line class="nav-menu_icon_line" x1="50" y1="450" x2="450" y2="450"/>
+                        </g>    
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+        <!-- /logo and menu toggle -->
+        <!-- menu navbar -->
+        <div class="row navbar-wrapper">
+            <nav class="col-12 navbar navbar-expand-md">
+                <div class="collapse navbar-collapse" id="navbarMenuToggle">
+                    <ul class="navbar-nav">
+                        <li id="nav-item-first" class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="showcase.html">Showcase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- menu navbar -->
+    </header>
+	
+	 <!-- Site content and Footer -->
+	<div class="container-fluid d-flex h-100 flex-column">
+		<div class="row contact-content-wrapper">
+			<div class="col-12 contact-form-wrapper">
+							
+				<form class="contract-form">
+                    <div class="row form-group">
+                        <div class="col-12 col-md-2"><label class="form-label" for="first-name">First Name:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="text" id="first-name" name="first-name" required="true"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-12 col-md-2"><label class="form-label" for="last-name">Last Name:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="text" id="last-name" name="last-name" required="true"></div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-12 col-md-2"><label class="form-label" for="email">E-mail:</label></div>
+                        <div class="col-12 col-md-10"><input class="form-control" type="email" id="email" name="email" required="true"></div>
+                    </div>                        
+                    <div class="row form-group">
+                        <div class="col-12 col-md-2"><label class="form-label" for="reason">Reason:</label></div>
+                        <div class="col-12 col-md-10">
+                            <select class="form-control" id="reason" name="reason">
+                                <option>General Enquiry</option>
+                                <option>Custom System Build</option>
+                                <option>System Upgrade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-12">
+                            <textarea class="form-message-box" name="message" id="message">Please type your message here.</textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group text-center">
+                        <div class="col-12">
+                            <button type="submit" class="btn form-button">Submit</button>
+                        </div>
+                    </div>
+				</form>
+				
+			</div>
+		</div>
+		
+		 <!-- FOOTER -->
+		<footer class="row site-footer">
+			<div class="col-4 col-sm-6">
+				<p><span class="d-none d-sm-inline">Copyright</span> &copy; 2020 <span class="d-none d-sm-inline">Sean Young</span></p>
+			</div>
+            <div class="col-8 col-sm-6 content-pane media-icons-wrapper">
+                <ul class="media-icons-list">
+                    <li>
+                        <a href="#">
+                            <svg class="sm-facebook_icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 251.84 250.86">
+            	                <g id="sm-facebook" data-name="Social Media Facebook Icon">
+		                            <g id="Facebook">
+			                            <path class="facebook_icon" d="M226.61,0H27.06A25.22,25.22,0,0,0,1.84,25.23C12.12,277.77-49.39,249.88,138.18,
+																	   250V138.62H113.84v-33h24.34c-4.69-56,24.75-76.85,77.5-72.88V67.09c-31.16-3-34.21,
+																	   9.15-32.92,38.55h33.11v33H182.76V250c22.17-1.9,68.35,10,69.08-25.23V25.23A25.23,25.23,
+																	   0,0,0,226.61,0Z"/>
+    		                        </g>
+	                            </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="sm-twitter_icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250">
+	                            <g id="sm-twitter" data-name="Social Media Twitter Icon">
+		                            <g id="Twitter">
+                        			    <path class="twitter_icon"
+											d="M224.77,0H25.23A25.22,25.22,0,0,0,0,25.23V224.77A25.22,25.22,0,0,0,25.23,250H224.77A25.22,
+												25.22,0,0,0,250,224.77V25.23A25.22,25.22,0,0,0,224.77,0Zm-3.52,72.51a97.71,97.71,0,0,1-10.51,
+												8.64C218.68,205.67,69.59,236.77,19,190.7c0,0,35.94,7.42,62.14-16.45-15.84-5.1-30.83-13.86-36.55-31.07,
+												0,0,2.43.61,9.74.61,8.53,0,9.14-1.83,9.14-1.83-17.11.21-35.62-25.42-34.11-42.64.74,2.58,17.46,6.38,
+												18.88,4.87-16.49-9.3-24.45-37.57-13.4-57.26,15.64,20.58,60.53,47.33,88.94,45.68-6.55-42.53,
+												44.12-71.47,74.56-39.46.19,2.3,27.59-9.76,26.57-9.88.09,4.56-12.9,21.26-17.85,23.39,0,0,3.23.37,
+												11.76-2.07S231,59.72,231,59.72,226.35,67.64,221.25,72.51Z"/>
+    		                        </g>
+	                            </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg class="sm-instagram_icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250">
+                                <defs>
+                                    <lineargradient id="sm-instagram-gradient" x1="100%" y1="0" x2="0" y2="100%">
+                                        <stop class="sm-inst-grad1" offset="0%"/>
+                                        <stop class="sm-inst-grad2" offset="25%"/>
+                                        <stop class="sm-inst-grad3" offset="50%"/>
+                                        <stop class="sm-inst-grad4" offset="75%"/>
+                                        <stop class="sm-inst-grad5" offset="100%"/>
+                                    </lineargradient>
+                                </defs>
+	                            <g id="sm-instagram" data-name="Social Media Instagram Icon">
+		                            <g id="Instagram">
+			                            <path class="instagram_icon" fill="url(#sm-instagram-gradient)" 
+											  d="M224.77,0H25.23A25.22,25.22,0,0,0,0,25.23V224.77A25.22,25.22,0,0,0,25.23,250H224.77A25.22,25.22,0,0,0,
+												250,224.77V25.23A25.22,25.22,0,0,0,224.77,0ZM124.5,192c-87.41-1.49-87.4-131.52,0-133C211.91,60.49,211.9,
+												190.52,124.5,192Zm67-114c-24.32-.42-24.31-36.59,0-37C215.82,41.42,215.81,77.59,191.5,78Z"/>
+		                            </g>
+    	                        </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg class="sm-youtube_icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 250 250">
+    	                        <g id="sm-youtube" data-name="Social Media Youtube Icon">
+	    	                        <g id="YouTube">
+		    	                        <path class="youtube_icon" 
+											  d="M224.77,0H25.23A25.22,25.22,0,0,0,0,25.23V224.77A25.22,25.22,0,0,0,25.23,250H224.77A25.22,25.22,0,0,0,
+												 250,224.77V25.23A25.22,25.22,0,0,0,224.77,0ZM65,175.48V75l128.05,50.24Z"/>
+		                            </g>
+	                            </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    	</footer>
+		
+	</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>
