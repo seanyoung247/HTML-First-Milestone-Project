@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+ /* Aldrich is similar to angular font used in the title image, good for headlines.
+ 	Open Sans is a rounded smooth easy to read font for body text. */
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Open+Sans&display=swap');
+
 
 /*
- * TODO: Vary font sizes for different screen sizes.
+ * TODO: 
+ *		 Add default font settings.
+ *		 
+ *		 Vary font sizes for different screen sizes.
  *       Global scaling of elements on really small screens?
  */
 
@@ -16,6 +22,7 @@
     --dark-color: #1a1a1a;
     --light-trans: rgba(242,242,242,0.85);  /*f2f2f2bf*/
     --dark-trans: rgba(26,26,26,0.85);      /*1a1a1abf*/
+	--accent-color: #f7931e;
     
     --facebook-color: #4267B2;
     --twitter-color: #55ACEE;
@@ -31,9 +38,12 @@
 
 html,body {height: 100%;}
 
+ /* Default font settings */
 body {
     font-family: 'Open Sans', sans-serif;
-	min-height: 100vh;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Aldrich', sans-serif;
 }
 
  /* Prevents content getting too wide while remaining fluid below 1200px.
@@ -51,6 +61,8 @@ body {
     position: absolute;
     z-index: 9999; /*Ensures header remains visible above hero-image*/
     background-color: var(--dark-trans);
+	
+	border-bottom: 1px solid var(--accent-color);
 }
 
 .site-logo {
@@ -63,6 +75,10 @@ body {
  /*
   * Navbar styles
   */
+.navbar {
+	padding: 5px;
+}
+
 .navbar-toggle-wrapper {
     display: flex;
     align-items: center;
@@ -89,29 +105,33 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--light-color);
+    color: var(--accent-color);
     background-color: var(--dark-color);
 }
 
 .nav-link {
     margin: 0px;
     color: var(--light-color);
+	padding: 0.5em;
+	
+	font-family: 'Aldrich', sans-serif;
+	font-size: 125%;
 }
 
 #nav-item-first {
     border-top: 1px;
     border-bottom: 1px;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
     border-style: solid;
     border-color: var(--light-color);
 }
 
 .nav-item {
-    border-top: 0px;
+    border-top: 0;
     border-bottom: 1px;
-    border-left: 0px;
-    border-right: 0px;
+    border-left: 0;
+    border-right: 0;
     border-style: solid;
     border-color: var(--light-color);
 }
@@ -119,10 +139,27 @@ body {
  /*
   * Content section styles
   */
+ /* hero-image-content-wrapper stretches to fill page with a flex wrapper.
+ 	Child elements can then be configured to fill available space or stay
+	at bottom of the page etc.*/
 .site-hero-image {
-    height: 100vh; /*200px;*/
-    background: url("../images/hero-sunrise-sm.jpg") no-repeat center center fixed;
+	 /* Shifts site content below the header. A bit of a clunky way to do it but it works. */
+	padding: 69px 0 0 0;
+
+	 /* Makes the wrapper expand to fill html body */
+	display: flex;
+	flex: 1;
+	
+	 /* I think it's better to stick with the larger hero image now it's full viewport height. */
+	background: url("../images/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
+	 /* I don't use vendor fallbacks here because all browsers have supported this since 2010 */
     background-size: cover;
+}
+
+ /* if the page is going to have content below the hero image not just above this class pushes it
+ 	to full height. If used the footer will always be below the bottom of the screen. */
+.full-vh {
+	height: 100vh;
 }
 
 .site-content-section {
@@ -149,8 +186,11 @@ body {
     background-color: var(--dark-color);
 	color: var(--light-color);
     height: 50px;
+	
+	border-top: 1px solid var(--accent-color);
 }
 
+ /* pushes the media icons to the right */
 .media-icons-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -161,7 +201,7 @@ body {
     overflow: hidden;
     margin: 0;
 }
-
+ /*makes the list horizontal*/
 .media-icons-list li {
     float: left;
     padding: 5px;
@@ -219,27 +259,61 @@ body {
   * Page specific styles
   *     Styles used only on specific pages
   */
-
- /* Contact Page */
- /* contact-content-wrapper stretches to fill page, contact-form-wrapper fills available space */
-.contact-content-wrapper {
-	 /* Shifts site content below the header. A bit of a clunky way to do it but it works. */
-	padding: 74px 0 0 0;
-
-	 /* Makes the wrapper expand to fill html body */
+ /* 
+  * Showcase Page
+  */
+.showcase-wrapper {
 	display: flex;
-	flex: 1;
-	
-	background: url("../images/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
-    background-size: cover;
 }
 
+.hero-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	
+	margin: auto;
+	max-width: 1200px;
+}
+
+.card {
+	background-color: var(--light-trans);
+	color: var(--dark-color);
+}
+
+.card-header,
+.card .collapse {	
+	padding: 5px;
+	margins: 0;
+}
+
+.card-toggle {
+	text-align: left;
+}
+
+.card-header-logo {
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin: auto;
+}
+
+.showcase-title {
+	font-size: 150%;
+}
+
+.showcase-header-desc {
+	text-align: center;
+}
+
+ /*
+  * Contact Page
+  */
 .contact-form-wrapper {
 	display: flex;
 }
 
  /* contract-form and form-group should expand to fill horizontal space */
-.contract-form,
+.contact-form,
 .form-group {
 	display: flex;
 	flex-grow: 1;
@@ -247,13 +321,13 @@ body {
 
  /* Centres contract-form vertically and horizontally and prevents the form
     becoming wider than 850px */
-.contract-form {
+.contact-form {
 	padding: 10px;
 	flex-direction: column;
 	
 	margin: auto;
 	max-width: 850px;
-	
+
 	background-color: var(--light-trans);
 	color: var(--dark-color);
 }
@@ -291,9 +365,19 @@ body {
         background-size: cover;
     }
 
-    .contact-content-wrapper {
-		padding-top: 144px;
+    .site-hero-image {
+		padding-top: 139px;
     }
+	
+	 /* Shrink showcase icon and header text */
+	.card-header-logo {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.showcase-title {
+		font-size: 200%;
+	}
 }
  /* md >768px width (tablets) */
 @media (min-width: 768px) {
@@ -312,6 +396,7 @@ body {
 
     .nav-link {
         width: 150px;
+		padding: 0;
     }
 
     .navbar-wrapper {
@@ -336,10 +421,15 @@ body {
         border-color: var(--light-color);
     }
 
-    .contact-content-wrapper {
-    	padding-top: 184px;
+    .site-hero-image {
+    	padding-top: 169px;
     }
 }
 
  /* lg >992px width (tablets/small PCs) */
+@media (min-width: 992px) {
+	.showcase-header-desc {
+		text-align: right;
+	}
+}
  /* xl >1200px width (PCs) */
