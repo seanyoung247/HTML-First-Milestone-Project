@@ -6,9 +6,12 @@
 /*
  * TODO: 
  *		 Add default font settings.
- *		 
+ *		 Add expand/collapse icon to accordian.
  *		 Vary font sizes for different screen sizes.
  *       Global scaling of elements on really small screens?
+ *		
+ *		Ideally the site should scale down to 220px width. The minimum Smartphone screen width is QVGA at 240px.
+ *		220px gives a decent margin to that, and I don't see any point targeting any smaller.
  */
 
  /*
@@ -25,9 +28,9 @@
 	--accent-color: #f7931e;
     
     --facebook-color: #4267B2;
-    --twitter-color: #55ACEE;
-    --instagram-color: #833AB4;
-    --youtube-color: #FF0000;
+    --twitter-color: #55acee;
+    --instagram-color: #833ab4;
+    --youtube-color: #ff0000;
 }
 
  /* No default margins or padding */
@@ -59,7 +62,7 @@ h1, h2, h3, h4, h5 {
   */
 .site-header {
     position: absolute;
-    z-index: 9999; /*Ensures header remains visible above hero-image*/
+    z-index: 999; /*Ensures header remains visible above hero-image*/
     background-color: var(--dark-trans);
 	
 	border-bottom: 1px solid var(--accent-color);
@@ -104,11 +107,6 @@ h1, h2, h3, h4, h5 {
     stroke-width: 100px;
 }
 
-.nav-link:hover {
-    color: var(--accent-color);
-    background-color: var(--dark-color);
-}
-
 .nav-link {
     margin: 0px;
     color: var(--light-color);
@@ -116,6 +114,18 @@ h1, h2, h3, h4, h5 {
 	
 	font-family: 'Aldrich', sans-serif;
 	font-size: 125%;
+	
+	 /* Slowly fades in and out the hover effect */
+   -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+   -ms-transition: all 0.5s ease;
+   transition: all 0.5s ease;	
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+    background-color: var(--dark-color);
 }
 
 #nav-item-first {
@@ -151,7 +161,7 @@ h1, h2, h3, h4, h5 {
 	flex: 1;
 	
 	 /* I think it's better to stick with the larger hero image now it's full viewport height. */
-	background: url("../images/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
+	background: url("../images/banner/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
 	 /* I don't use vendor fallbacks here because all browsers have supported this since 2010 */
     background-size: cover;
 }
@@ -190,6 +200,11 @@ h1, h2, h3, h4, h5 {
 	border-top: 1px solid var(--accent-color);
 }
 
+#footer-copy-notice {
+	padding-top: 5px;
+	font-size: 75%;
+}
+
  /* pushes the media icons to the right */
 .media-icons-wrapper {
     display: flex;
@@ -215,8 +230,8 @@ h1, h2, h3, h4, h5 {
 .sm-twitter_icon,
 .sm-instagram_icon,
 .sm-youtube_icon {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
 }
 
 .facebook_icon,
@@ -249,11 +264,11 @@ h1, h2, h3, h4, h5 {
 }
 
  /* Instagram icon uses gradients instead of solid colour */
-.sm-instagram_icon:hover .sm-inst-grad1 {stop-color: #515BD4;}
-.sm-instagram_icon:hover .sm-inst-grad2 {stop-color: #8134AF;}
-.sm-instagram_icon:hover .sm-inst-grad3 {stop-color: #DD2A7B;}
-.sm-instagram_icon:hover .sm-inst-grad4 {stop-color: #F58529;}
-.sm-instagram_icon:hover .sm-inst-grad5 {stop-color: #FEDA77;}
+.sm-instagram_icon:hover .sm-inst-grad1 {stop-color: #515bd4;}
+.sm-instagram_icon:hover .sm-inst-grad2 {stop-color: #8134af;}
+.sm-instagram_icon:hover .sm-inst-grad3 {stop-color: #dd2a7b;}
+.sm-instagram_icon:hover .sm-inst-grad4 {stop-color: #f58529;}
+.sm-instagram_icon:hover .sm-inst-grad5 {stop-color: #feda77;}
 
  /*
   * Page specific styles
@@ -262,8 +277,13 @@ h1, h2, h3, h4, h5 {
  /* 
   * Showcase Page
   */
+
+ /* showcase-wrapper and hero-content-wrapper expand to fill at least 
+	full viewport height and width and centre content in available space
+	with a maximum width of 1200px. */
 .showcase-wrapper {
 	display: flex;
+	padding: 0;
 }
 
 .hero-content-wrapper {
@@ -280,6 +300,10 @@ h1, h2, h3, h4, h5 {
 	color: var(--dark-color);
 }
 
+.card-body {
+	padding: 0;
+}
+
 .card-header,
 .card .collapse {	
 	padding: 5px;
@@ -288,6 +312,9 @@ h1, h2, h3, h4, h5 {
 
 .card-toggle {
 	text-align: left;
+}
+.card-toggle:focus {
+	outline: 1px solid var(--accent-color);
 }
 
 .card-header-logo {
@@ -305,6 +332,119 @@ h1, h2, h3, h4, h5 {
 	text-align: center;
 }
 
+.showcase-description
+{
+	background-color: var(--dark-color);
+	color: var(--light-color);
+	
+	padding: 10px;
+}
+
+.showcase-techspec {
+	background-color: var(--light-color);
+	color: var(--dark-color);
+	
+	padding: 10px;
+}
+
+.showcase-tech-key {
+	font-family: 'Aldrich', sans-serif;
+	font-weight: bold;
+}
+
+.showcase-tech-value {
+	padding: 0 0 10px 25px;
+}
+
+.showcase-gallery {
+	padding: 10px;
+}
+
+.showcase-thumbnail {
+	object-fit: cover;
+	
+	width: 100%;
+	padding: 10px;
+	
+	border-radius: 50%;
+	
+	 /* Slowly fades in and out the hover effect */
+   -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+   -ms-transition: all 0.5s ease;
+   transition: all 0.5s ease;	
+}
+ /* Darkens thumbnail image on mouseover */
+.showcase-thumbnail:hover {
+	/*-webkit-filter: brightness(50%);
+	filter: brightness(50%);*/
+	border-radius: 10%;
+}
+
+.dialog {
+	 /* Ensures the modal is above the header */
+	z-index: 9999;
+}
+
+.modal-content {
+	background-color: var(--light-color);
+	color: var(--dark-color);
+}
+
+.modal-header {
+	border-color: var(--accent-color);
+}
+
+.modal-footer button {
+	background-color: var(--dark-color);
+	color: var(--light-color);
+}
+
+.carousel-arrow {
+	font-size: 500%;
+	font-weight: bolder;
+	color: var(--light-color);
+	
+	 /* Gives the arrow a dark outline, so it shows up on light backgrounds
+		text-shadow is supported on pretty much every browser since 2012. */
+	text-shadow:
+        -1px -1px 0 var(--dark-color),
+         1px -1px 0 var(--dark-color),
+        -1px  1px 0 var(--dark-color),
+         1px  1px 0 var(--dark-color);
+	
+}
+
+ /* carousel-item and carousel-item-image prevents the image getting larger 
+    than the screen in any direction and centres it in the window */
+.carousel-item {
+	max-width: 75vw;
+	max-height: 75vh;
+	margin:auto;
+}
+
+.carousel-item-image {
+	display: block;
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+	max-width: 75vw;
+	max-height: 75vh;
+	margin:auto;
+}
+
+ /* caption is hidden on smaller screens. */
+.carousel-caption {
+	display: none;
+}
+.carousel-caption p {
+	text-shadow:
+        -1px -1px 0 var(--dark-color),
+         1px -1px 0 var(--dark-color),
+        -1px  1px 0 var(--dark-color),
+         1px  1px 0 var(--dark-color);	
+}
  /*
   * Contact Page
   */
@@ -332,15 +472,15 @@ h1, h2, h3, h4, h5 {
 	color: var(--dark-color);
 }
 
+.form-message-box {
+	width: 100%;
+	height: 100px;
+}
+
 .form-control,
 .form-message-box {
 	background-color: var(--light-color);
 	color: var(--dark-color);
-}
-
-.form-message-box {
-	width: 100%;
-	height: 100px;
 }
 
 .form-button {
@@ -348,10 +488,32 @@ h1, h2, h3, h4, h5 {
 	color: var(--light-color);
 }
 
+.form-button:focus,
+.form-control:focus,
+.form-message-box:focus
+{
+	outline: 2px solid var(--accent-color);
+}
 
  /*
   * Media Queries
   */
+ /* Minimum targeted width is 220px. The smallest resolution currently in use (AFAIK) is QVGA at 240px width.
+    Acessabilty screen scalling systems don't go lower than that without panning/zooming so I think targeting
+    smaller resolutions would be wasted effort at this stage. 220px gives a reasonable margin of error. */
+
+ /* xs >320px (small smartphones) */
+@media (min-width: 320px) {
+	.sm-facebook_icon,
+	.sm-twitter_icon,
+	.sm-instagram_icon,
+	.sm-youtube_icon {
+    	width: 25px;
+    	height: 25px;
+	}
+}
+
+ /* xs->sm >450px (smartphones) */
  /* sm >576px (smartphones) */
 @media (min-width: 450px) {
     .site-logo {
@@ -361,7 +523,7 @@ h1, h2, h3, h4, h5 {
     }
 
     .site-hero-image {
-        background: url("../images/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
+        background: url("../images/banner/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
         background-size: cover;
     }
 
@@ -377,6 +539,10 @@ h1, h2, h3, h4, h5 {
 	
 	.showcase-title {
 		font-size: 200%;
+	}
+	
+	.carousel-caption {
+		display: block;
 	}
 }
  /* md >768px width (tablets) */
@@ -424,6 +590,11 @@ h1, h2, h3, h4, h5 {
     .site-hero-image {
     	padding-top: 169px;
     }
+	
+	.showcase-techspec {
+		background-color: var(--dark-color);
+		color: var(--light-color);
+	}
 }
 
  /* lg >992px width (tablets/small PCs) */

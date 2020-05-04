@@ -31,7 +31,23 @@ TO DO.
 
 ## Technologies Used
 
-None yet...
+###Web Technologies
+HTML5
+CSS3
+Bootstrap
+SVG
+
+###Developer Tools
+Git
+Gitpod
+Textpad
+Dreamweaver
+
+###Art creation
+Photoshop
+Adobe Illustrator
+
+Photos taken with a Canon 5D DSLR camera.
 
 ## Testing
 
@@ -45,3 +61,10 @@ Nothing to deploy yet...
 
 Logo/Title artwork by Sean Young.
 Logo/Title text based on 01Digitall font by David Chung (free licence) and Flow by Matt Chisholm (Free licence).
+Media icons and menu "hamburger" icon by Sean Young.
+Photographs by Sean Young.
+Web-design by Sean Young.
+HTML and Styling by Sean Young.
+Showcase Gallery code based on example code from https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/ by Diego Vogel
+Showcase Accordian based on example code from https://getbootstrap.com/docs/4.3/components/collapse/
+Menu navbar based on example code from https://getbootstrap.com/docs/4.0/components/navbar/

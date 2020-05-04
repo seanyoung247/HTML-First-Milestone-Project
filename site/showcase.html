@@ -67,16 +67,219 @@
   						<div class="card">
 
 							<button id="showcaseOne" class="card-header card-toggle" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								<div class="row no-gutters">
-									<div class="col-2 col-md-1"><img class="card-header-logo" src="assets/images/chameleon-logo.svg" alt="Project Chameleon logo"></div>
+								<div class="row m-0">
+									<div class="col-2 col-md-1"><img class="card-header-logo" src="assets/images/showcase/chameleon/chameleon-logo.svg" alt="Project Chameleon logo"></div>
 									<div class="col-10 col-lg-5"><h2 class="showcase-title">Project Chameleon</h2></div>
-									<div class="col-12 col-lg-6"><p class="showcase-header-desc">A silent but powerful 4k/VR gaming and media creation workstation.</p></div>
+									<div class="d-none d-sm-block col-lg-6"><p class="showcase-header-desc">A silent but powerful 4k/VR gaming and media creation workstation.</p></div>
 								</div>
 							</button>
 		
-							<div id="collapseOne" class="collapse show" aria-labelledby="showcaseOne" data-parent="#accordion">
+							<div id="collapseOne" class="collapse show p-0" aria-labelledby="showcaseOne" data-parent="#accordion">
 								<div class="card-body">
-									Project Chameleon Content goes here.
+									
+									<!-- Chameleon content panel -->
+									<div class="showcase-panel">
+										<!-- top row -->
+										<div class="row m-0">
+											<!-- Logo is already in header, so this is superflous 
+												 Retained for possible future use.
+												 Could maybe be build status instead?
+											<div class="col-md-4 showcase-logo">
+												This is the logo box
+											</div>-->
+						
+											<div class="col-12 showcase-description">
+												<p> Designed to be powerful and silent, Project Chameleon can handle everything from 
+													4k gaming to video editing and 3D rendering. What is more it can deliver all this 
+													power while being whisper quiet! </p>
+												<p> A Neutral colour pallet combines with LED lighting to allow the machine to change
+													its look at a press of a button, a true chameleon! </p>
+											</div>
+					
+										</div>
+					 					
+										<!--bottom row-->
+										<div class="row m-0">
+											<div class="col-md-4 showcase-techspec">
+												<h3>Tech Specs</h3>
+												<div class="row m-0">
+													<!--col-12 to give the option of a changing layout if wanted later -->
+													<div class="col-12 showcase-tech-key">
+														CPU:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														intel i9900k overclocked to 5ghz <!-- Link to component information? Wiki or product page? -->
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Memory:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														32gb G.SKILL TridentZ RGB 3600mhz
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Graphics:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														Nvidia Geforce 2080ti RTX
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Cooling:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														1x360mm + 1x240mm radiators: 835watts
+													</div>
+												</div>
+											</div>
+	
+											<div class="col-md-8">
+												<div id="showcase-one-gallery" class="row no-gutters showcase-gallery" data-toggle="modal" data-target="#showcase-one-modal">
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/overview-sm.jpg" 
+															 alt="Chameleon side-view thumbnail" data-target="#showcase-one-carousel" data-slide-to="0">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/external-lighting-sm.jpg" 
+															 alt="Chameleon external lighting thumbnail" data-target="#showcase-one-carousel" data-slide-to="1">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/front-panel-sm.jpg" 
+															 alt="Chameleon front panel thumbnail" data-target="#showcase-one-carousel" data-slide-to="2">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/closeup-sm.jpg" 
+															 alt="Chameleon close-up thumbnail" data-target="#showcase-one-carousel" data-slide-to="3">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/vaporwave-sm.jpg" 
+															 alt="Chameleon vaporwave thumbnail" data-target="#showcase-one-carousel" data-slide-to="4">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/rgb-sm.jpg" 
+															 alt="Chameleon RGB thumbnail" data-target="#showcase-one-carousel" data-slide-to="5">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-cables-sm.jpg" 
+															 alt="Chameleon custom cables thumbnail" data-target="#showcase-one-carousel" data-slide-to="6">
+													</div>
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-boot-sm.jpg" 
+															 alt="Chameleon boot image thumbnail" data-target="#showcase-one-carousel" data-slide-to="7">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										 <!-- Showcase gallery modal -->
+										<div class="modal fade" id="showcase-one-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  											<div class="modal-dialog modal-lg" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														 <!-- the span pushes the close button to the right. I'm honestly not sure why it's needed. -->
+														<span></span>
+        												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">×</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														
+														
+														<div id="showcase-one-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+															<div class="carousel-inner">
+																<div class="carousel-item active">
+																	<a href="assets/images/showcase/chameleon/overview-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="chameleon side view" src="assets/images/showcase/chameleon/overview-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Tempered glass side panel and LED lighting.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/external-lighting-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon external lighting" src="assets/images/showcase/chameleon/external-lighting-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>External case lighting.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/front-panel-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon front panel" src="assets/images/showcase/chameleon/front-panel-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Front panel: 2x usb 3.0, power and reset.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/closeup-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon closeup of ram and cpu" src="assets/images/showcase/chameleon/closeup-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Close up of RAM and CPU with LED waterblock.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/vaporwave-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon purple lighting" src="assets/images/showcase/chameleon/vaporwave-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Indepentantly addressable LEDs: infinite lighting possibilities.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/rgb-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon rgb lighting" src="assets/images/showcase/chameleon/rgb-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Composite showing Chameleon's colour changing abilities.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/custom-cables-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon custom cables" src="assets/images/showcase/chameleon/custom-cables-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Custom sleeved cables keep the asthetics consistent.</p>
+																	</div>
+																</div>
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/chameleon/custom-boot-lg.jpg" title="Open in new tab." target="_blank">
+																		<img class="carousel-item-image" alt="chameleon custom boot logo" src="assets/images/showcase/chameleon/custom-boot-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Features include a custom boot logo.</p>
+																	</div>
+																</div>
+															</div>
+															
+															<a class="carousel-control-prev" href="#showcase-one-carousel" role="button" data-slide="prev">
+																<span class="carousel-arrow" aria-hidden="true">&lt;</span>
+																<span class="sr-only">Previous</span>
+															</a>
+															<a class="carousel-control-next" href="#showcase-one-carousel" role="button" data-slide="next">
+																<span class="carousel-arrow" aria-hidden="true">&gt;</span>
+																<span class="sr-only">Next</span>
+															</a>
+														</div>
+													</div>
+														
+														
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /Showcase gallery modal -->
+										
+									</div>									
+									<!-- /Chameleon content panel -->
+									
 								</div>
 	  						</div>
 						</div>
@@ -84,16 +287,125 @@
   						<div class="card">
 
 							<button id="showcaseTwo" class="card-header card-toggle collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-								<div class="row no-gutters">
-									<div class="col-2 col-md-1"><img class="card-header-logo" src="assets/images/gecko-logo.svg" alt="Project Gecko logo"></div>
+								<div class="row m-0">
+									<div class="col-2 col-md-1"><img class="card-header-logo" src="assets/images/showcase/gecko/gecko-logo.svg" alt="Project Gecko logo"></div>
 									<div class="col-10 col-lg-5"><h2 class="showcase-title">Project Gecko</h2></div>
-									<div class="col-12 col-lg-6"><p class="showcase-header-desc">A small form-factor HD/VR gaming and media-centre PC for the living room.</p></div>
+									<div class="d-none d-sm-block col-lg-6"><p class="showcase-header-desc">A small form-factor HD/VR gaming and media-centre PC for the living room.</p></div>
 								</div>
 							</button>
 
-    						<div id="collapseTwo" class="collapse" aria-labelledby="showcaseTwo" data-parent="#accordion">
+    						<div id="collapseTwo" class="collapse p-0" aria-labelledby="showcaseTwo" data-parent="#accordion">
       							<div class="card-body">
-        							Project Gecko Content goes here.
+									<!-- Gecko content panel -->
+									<div class="showcase-panel">
+										<!-- top row -->
+										<div class="row m-0">					
+											<div class="col-12 showcase-description">
+												<p> Designed to be small and sleek yet powerful, Project Gecko can handle HD/VR gaming while not 
+													looking out of place in a living room. Water-cooling and a low watt CPU help keep temperatures 
+													and noise, to a minimum. </p>
+												<p> The metallic and black colour scheme help Gecko blend in with living room audio-visual equipment,
+													while the small form factor helps it blend into the background. </p>
+											</div>
+										</div>
+					 					
+										<!--bottom row-->
+										<div class="row m-0">
+											<div class="col-md-4 showcase-techspec">
+												<h3>Tech Specs</h3>
+												<div class="row m-0">
+													<!--col-12 to give the option of a changing layout if wanted later -->
+													<div class="col-12 showcase-tech-key">
+														CPU:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														i5 9400k
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Memory:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														16gb Corsair Vengence 2600mhz
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Graphics:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														Nvidia Geforce 1080ti GTX
+													</div>
+												</div>
+												<div class="row m-0">
+													<div class="col-12 showcase-tech-key">
+														Cooling:
+													</div>
+													<div class="col-12 showcase-tech-value">
+														1x240mm + 1x120mm slimline radiators: 424w
+													</div>
+												</div>
+											</div>
+	
+											<div class="col-md-8">
+												<div id="showcase-two-gallery" class="row no-gutters showcase-gallery" data-toggle="modal" data-target="#showcase-two-modal">
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/overview-sm.jpg" 
+															 alt="Chameleon side-view thumbnail" data-target="#showcase-one-carousel" data-slide-to="0">
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										 <!-- Showcase gallery modal -->
+										<div class="modal fade" id="showcase-two-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  											<div class="modal-dialog modal-lg" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														 <!-- the span pushes the close button to the right. I'm honestly not sure why it's needed. -->
+														<span></span>
+        												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">×</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														
+														
+														<div id="showcase-one-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+															<div class="carousel-inner">
+																<div class="carousel-item active">
+																	<a href="assets/images/showcase/chameleon/overview-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="NOT CHAMELEON CHANGE ME!!!!" src="assets/images/showcase/chameleon/overview-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p></p>
+																	</div>
+																</div>
+															</div>
+															
+															<a class="carousel-control-prev" href="#showcase-two-carousel" role="button" data-slide="prev">
+																<span class="carousel-arrow" aria-hidden="true">&lt;</span>
+																<span class="sr-only">Previous</span>
+															</a>
+															<a class="carousel-control-next" href="#showcase-two-carousel" role="button" data-slide="next">
+																<span class="carousel-arrow" aria-hidden="true">&gt;</span>
+																<span class="sr-only">Next</span>
+															</a>
+														</div>
+													</div>
+														
+														
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /Showcase gallery modal -->
+										
+									</div>									
+									<!-- /Gecko content panel -->
       							</div>
     						</div>
   						</div>
@@ -108,7 +420,7 @@
 		
 		 <!-- FOOTER -->
 		<footer class="row site-footer">
-			<div class="col-4 col-sm-6">
+			<div id="footer-copy-notice" class="col-4 col-sm-6">
 				<p><span class="d-none d-sm-inline">Copyright</span> &copy; 2020 <span class="d-none d-sm-inline">Sean Young</span></p>
 			</div>
             <div class="col-8 col-sm-6 content-pane media-icons-wrapper">
