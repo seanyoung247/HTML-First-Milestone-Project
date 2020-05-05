@@ -61,7 +61,7 @@
 		
 			<div class="col-12 showcase-wrapper">
 
-				<div class="hero-content-wrapper">
+				<div class="hero-content-wrapper content-pane">
 					
 					<div id="accordion">
   						<div class="card">
@@ -81,14 +81,57 @@
 									<div class="showcase-panel">
 										<!-- top row -->
 										<div class="row m-0">
-											<!-- Logo is already in header, so this is superflous 
-												 Retained for possible future use.
-												 Could maybe be build status instead?
-											<div class="col-md-4 showcase-logo">
-												This is the logo box
-											</div>-->
+
+											 <!-- showcase-quicklook and showcase-description swap order on smaller screens so the
+												  description remains at the top -->
+											<div class="col-md-4 order-2 order-md-1 showcase-quicklook">
+												<h3>Quicklook</h3>
+												
+												
+												<div class="row m-0 progress-section">
+													<div class="col">
+												
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+																aria-valuemax="100" style="width:100%;">
+																<span class="sr-only">100% complete</span>
+															</div>
+															<span class="progress-type">Build state: Complete</span>
+														</div>
+														
+														
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+																aria-valuemax="100" style="width:100%;">
+																<span class="sr-only">100% complete</span>
+															</div>
+															<span class="progress-type">Productivity</span>
+														</div>
+														
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+																aria-valuemax="100" style="width:100%;">
+																<span class="sr-only">100% complete</span>
+															</div>
+															<span class="progress-type">Gaming</span>
+														</div>
+													
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0"
+																aria-valuemax="100" style="width:10%;">
+																<span class="sr-only">10% complete</span>
+															</div>
+															<span class="progress-type">Noise: 20-40db</span>
+														</div>
+														
+													</div>
+												</div>
+												
+												
+											</div>
 						
-											<div class="col-12 showcase-description">
+											<div class="col-md-8 order-1 order-md-2 showcase-description">
+												<h3>Description</h3>
 												<p> Designed to be powerful and silent, Project Chameleon can handle everything from 
 													4k gaming to video editing and 3D rendering. What is more it can deliver all this 
 													power while being whisper quiet! </p>
@@ -140,35 +183,35 @@
 											<div class="col-md-8">
 												<div id="showcase-one-gallery" class="row no-gutters showcase-gallery" data-toggle="modal" data-target="#showcase-one-modal">
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/overview-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/overview-sm.jpg" title="click to enlarge"
 															 alt="Chameleon side-view thumbnail" data-target="#showcase-one-carousel" data-slide-to="0">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/external-lighting-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/external-lighting-sm.jpg" title="click to enlarge"
 															 alt="Chameleon external lighting thumbnail" data-target="#showcase-one-carousel" data-slide-to="1">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/front-panel-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/front-panel-sm.jpg" title="click to enlarge"
 															 alt="Chameleon front panel thumbnail" data-target="#showcase-one-carousel" data-slide-to="2">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/closeup-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/closeup-sm.jpg" title="click to enlarge"
 															 alt="Chameleon close-up thumbnail" data-target="#showcase-one-carousel" data-slide-to="3">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/vaporwave-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/vaporwave-sm.jpg" title="click to enlarge"
 															 alt="Chameleon vaporwave thumbnail" data-target="#showcase-one-carousel" data-slide-to="4">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/rgb-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/rgb-sm.jpg" title="click to enlarge"
 															 alt="Chameleon RGB thumbnail" data-target="#showcase-one-carousel" data-slide-to="5">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-cables-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-cables-sm.jpg" title="click to enlarge"
 															 alt="Chameleon custom cables thumbnail" data-target="#showcase-one-carousel" data-slide-to="6">
 													</div>
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-boot-sm.jpg" 
+														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/custom-boot-sm.jpg" title="click to enlarge"
 															 alt="Chameleon boot image thumbnail" data-target="#showcase-one-carousel" data-slide-to="7">
 													</div>
 												</div>
@@ -258,11 +301,11 @@
 															</div>
 															
 															<a class="carousel-control-prev" href="#showcase-one-carousel" role="button" data-slide="prev">
-																<span class="carousel-arrow" aria-hidden="true">&lt;</span>
+																<span class="carousel-arrow outline-text" aria-hidden="true">&lt;</span>
 																<span class="sr-only">Previous</span>
 															</a>
 															<a class="carousel-control-next" href="#showcase-one-carousel" role="button" data-slide="next">
-																<span class="carousel-arrow" aria-hidden="true">&gt;</span>
+																<span class="carousel-arrow outline-text" aria-hidden="true">&gt;</span>
 																<span class="sr-only">Next</span>
 															</a>
 														</div>
@@ -299,11 +342,56 @@
 									<!-- Gecko content panel -->
 									<div class="showcase-panel">
 										<!-- top row -->
-										<div class="row m-0">					
-											<div class="col-12 showcase-description">
-												<p> Designed to be small and sleek yet powerful, Project Gecko can handle HD/VR gaming while not 
-													looking out of place in a living room. Water-cooling and a low watt CPU help keep temperatures 
-													and noise, to a minimum. </p>
+										<div class="row m-0">
+											<div class="col-md-4 order-sm-2 order-md-1 showcase-quicklook">
+												<h3>Quicklook</h3>
+												
+												
+												<div class="row m-0 progress-section">
+													<div class="col">
+												
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+																aria-valuemax="100" style="width:20%;">
+																<span class="sr-only">20% complete</span>
+															</div>
+															<span class="progress-type">Build state: Building</span>
+														</div>
+														
+														
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+																aria-valuemax="100" style="width:65%;">
+																<span class="sr-only">65% complete</span>
+															</div>
+															<span class="progress-type">Productivity</span>
+														</div>
+														
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+																aria-valuemax="100" style="width:80%;">
+																<span class="sr-only">80% complete</span>
+															</div>
+															<span class="progress-type">Gaming</span>
+														</div>
+													
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+																aria-valuemax="100" style="width:20%;">
+																<span class="sr-only">25% complete</span>
+															</div>
+															<span class="progress-type">Noise: 35-50db</span>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+						
+											<div class="col-md-8 order-sm-1 order-md-2 showcase-description">
+												<h3>Description</h3>
+												<p> Designed to be small and sleek yet powerful, once complete Project Gecko will be able to handle
+													HD/VR gaming while not looking out of place in a living room. Water-cooling and a low watt CPU
+													help keep temperatures and noise, to a minimum. </p>
 												<p> The metallic and black colour scheme help Gecko blend in with living room audio-visual equipment,
 													while the small form factor helps it blend into the background. </p>
 											</div>
@@ -350,10 +438,27 @@
 	
 											<div class="col-md-8">
 												<div id="showcase-two-gallery" class="row no-gutters showcase-gallery" data-toggle="modal" data-target="#showcase-two-modal">
+												
 													<div class="col-12 col-sm-6 col-lg-3">
-														<img class="showcase-thumbnail" src="assets/images/showcase/chameleon/overview-sm.jpg" 
-															 alt="Chameleon side-view thumbnail" data-target="#showcase-one-carousel" data-slide-to="0">
+														<img class="showcase-thumbnail" src="assets/images/showcase/gecko/build-sm.jpg" title="click to enlarge"
+															 alt="Gecko building" data-target="#showcase-two-carousel" data-slide-to="0">
 													</div>
+													
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/gecko/closeup-sm.jpg" title="click to enlarge"
+															 alt="Gecko closeup build" data-target="#showcase-two-carousel" data-slide-to="0">
+													</div>
+													
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/gecko/radiator-closeup-sm.jpg" title="click to enlarge"
+															 alt="Gecko radiator closeup" data-target="#showcase-two-carousel" data-slide-to="0">
+													</div>
+													
+													<div class="col-12 col-sm-6 col-lg-3">
+														<img class="showcase-thumbnail" src="assets/images/showcase/gecko/vertical-sm.jpg" title="click to enlarge"
+															 alt="Gecko tower complete" data-target="#showcase-two-carousel" data-slide-to="0">
+													</div>
+													
 												</div>
 											</div>
 										</div>
@@ -372,24 +477,54 @@
 													<div class="modal-body">
 														
 														
-														<div id="showcase-one-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+														<div id="showcase-two-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 															<div class="carousel-inner">
+																
 																<div class="carousel-item active">
-																	<a href="assets/images/showcase/chameleon/overview-lg.jpg" title="Open in new tab." target="_blank">
-																	   <img class="carousel-item-image" alt="NOT CHAMELEON CHANGE ME!!!!" src="assets/images/showcase/chameleon/overview-lg.jpg">
+																	<a href="assets/images/showcase/gecko/build-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="Gecko building" src="assets/images/showcase/gecko/build-lg.jpg">
 																	</a>
 																	<div class="carousel-caption">
-																		<p></p>
+																		<p>Mid-build showing cable routing and GFX card.</p>
 																	</div>
 																</div>
+																
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/gecko/closeup-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="Gecko closeup build" src="assets/images/showcase/gecko/closeup-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Mid-Build showing cable routing to motherboard compartment.</p>
+																	</div>
+																</div>
+																
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/gecko/radiator-closeup-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="Gecko radiator closeup" src="assets/images/showcase/gecko/radiator-closeup-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>Closeup of the radiators and fans.</p>
+																	</div>
+																</div>
+																
+																<div class="carousel-item">
+																	<a href="assets/images/showcase/gecko/vertical-lg.jpg" title="Open in new tab." target="_blank">
+																	   <img class="carousel-item-image" alt="Gecko tower complete" src="assets/images/showcase/gecko/vertical-lg.jpg">
+																	</a>
+																	<div class="carousel-caption">
+																		<p>How Gecko will look when complete.</p>
+																	</div>
+																</div>
+																
+																
 															</div>
 															
 															<a class="carousel-control-prev" href="#showcase-two-carousel" role="button" data-slide="prev">
-																<span class="carousel-arrow" aria-hidden="true">&lt;</span>
+																<span class="carousel-arrow outline-text" aria-hidden="true">&lt;</span>
 																<span class="sr-only">Previous</span>
 															</a>
 															<a class="carousel-control-next" href="#showcase-two-carousel" role="button" data-slide="next">
-																<span class="carousel-arrow" aria-hidden="true">&gt;</span>
+																<span class="carousel-arrow outline-text" aria-hidden="true">&gt;</span>
 																<span class="sr-only">Next</span>
 															</a>
 														</div>
