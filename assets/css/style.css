@@ -7,11 +7,7 @@
  * TODO: 
  *		 Add default font settings.
  *		 Add expand/collapse icon to accordian.
- *		 Vary font sizes for different screen sizes.
  *       Global scaling of elements on really small screens?
- *		
- *		Ideally the site should scale down to 220px width. The minimum Smartphone screen width is QVGA at 240px.
- *		220px gives a decent margin to that, and I don't see any point targeting any smaller.
  */
 
  /*
@@ -20,12 +16,15 @@
   */
 
  /* Global colour definitions */
+ /* Using CSS variables doesn't reduce typing, but names are easier to remember than hex codes.
+	It's also much easier to change one variable declaration if a color changes... */
 :root {
     --light-color: #f2f2f2;
     --dark-color: #1a1a1a;
-    --light-trans: rgba(242,242,242,0.85);  /*f2f2f2bf*/
-    --dark-trans: rgba(26,26,26,0.85);      /*1a1a1abf*/
+    --light-trans: rgba(242,242,242,0.85);  /*f2f2f2d8*/
+    --dark-trans: rgba(26,26,26,0.85);      /*1a1a1ad8*/
 	--accent-color: #f7931e;
+	--accent-trans: rgba(247,147,30,0.85);	/*f7931ed8*/
     
     --facebook-color: #4267B2;
     --twitter-color: #55acee;
@@ -55,6 +54,16 @@ h1, h2, h3, h4, h5 {
     max-width: 1200px;
      /* Centres horizontally but not vertically */
     margin: 0 auto;
+}
+
+.outline-text {
+	 /* Uses a 1px shadow in all directions to give text an outline.
+	    supported in all browsers since at least 2015 */
+	text-shadow:
+        -1px -1px 0 var(--dark-color),
+         1px -1px 0 var(--dark-color),
+        -1px  1px 0 var(--dark-color),
+         1px  1px 0 var(--dark-color);
 }
 
  /*
@@ -149,9 +158,18 @@ h1, h2, h3, h4, h5 {
  /*
   * Content section styles
   */
- /* hero-image-content-wrapper stretches to fill page with a flex wrapper.
+ /* hero-content-wrapper stretches to fill page with a flex wrapper.
  	Child elements can then be configured to fill available space or stay
 	at bottom of the page etc.*/
+
+.hero-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	
+	margin: auto;
+}
+
 .site-hero-image {
 	 /* Shifts site content below the header. A bit of a clunky way to do it but it works. */
 	padding: 69px 0 0 0;
@@ -166,8 +184,8 @@ h1, h2, h3, h4, h5 {
     background-size: cover;
 }
 
- /* if the page is going to have content below the hero image not just above this class pushes it
- 	to full height. If used the footer will always be below the bottom of the screen. */
+ /* if the page is going to have content below the hero image not just floated over this class pushes it
+ 	to full height. If used the footer will be below the bottom of the screen so the page will always scroll */
 .full-vh {
 	height: 100vh;
 }
@@ -205,6 +223,7 @@ h1, h2, h3, h4, h5 {
 	font-size: 75%;
 }
 
+ /* --------------------- social media icons --------------------- */
  /* pushes the media icons to the right */
 .media-icons-wrapper {
     display: flex;
@@ -274,6 +293,71 @@ h1, h2, h3, h4, h5 {
   * Page specific styles
   *     Styles used only on specific pages
   */
+ /*
+  * Home page
+  */
+.callout-wrapper {
+	margin: auto;
+	text-align: center;
+	
+	/* If uncommented the entire callout will have a 
+	   background*/
+	/*padding: 10px;
+	border-radius: 1em;
+	background-color: var(--dark-trans);*/
+}
+
+.callout-title {	
+	color: var(--light-color);
+	font-size: 200%;
+	margin: 0.5em 0;
+	
+	/* If uncommented the callout title a lozenge shaped background */
+	/*background-color: var(--dark-trans);
+	border-radius: 1em;
+	padding: 0.25em 0.5em;*/
+}
+
+.callout-action-title {
+	color: var(--light-color);
+	margin: 0.5em 0;
+}
+
+.callout-rule {
+	width: 75px;
+	height: 5px;
+	margin: auto;
+	background-color: var(--accent-color);
+}
+
+.callout-button {
+	display: block;
+	margin: 0.5em auto;
+	padding: 0.25em 0.5em;
+	
+	width: 8em;
+	
+	font-size: 150%;
+	
+	color: var(--light-color);
+	background: var(--accent-trans);
+	border-radius: 1em;
+}
+.callout-button:hover {
+	text-decoration: none;
+	color: var(--light-color);
+	background-color: var(--accent-color);
+}
+
+.callout-link {
+	color: var(--light-color);
+}
+
+.callout-link:hover {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
  /* 
   * Showcase Page
   */
@@ -286,15 +370,7 @@ h1, h2, h3, h4, h5 {
 	padding: 0;
 }
 
-.hero-content-wrapper {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	
-	margin: auto;
-	max-width: 1200px;
-}
-
+ /* --------------------- Showcase cards --------------------- */
 .card {
 	background-color: var(--light-trans);
 	color: var(--dark-color);
@@ -332,17 +408,39 @@ h1, h2, h3, h4, h5 {
 	text-align: center;
 }
 
-.showcase-description
-{
-	background-color: var(--dark-color);
-	color: var(--light-color);
+.showcase-quicklook {
+	background-color: var(--light-color);
+	color: var(--dark-color);
 	
 	padding: 10px;
 }
 
-.showcase-techspec {
-	background-color: var(--light-color);
+.progress {
+    position: relative;
+	margin: 5px;
+	border: 1px solid var(--dark-color);
+}
+
+.progress-bar {
+	background-color: var(--accent-color);
+}
+
+.progress-type {
+    position: absolute;
+    left: 5px;
+	
 	color: var(--dark-color);
+}
+
+.progress-section {
+	padding: 5px 10px;
+}
+
+.showcase-description,
+.showcase-techspec
+{
+	background-color: var(--dark-color);
+	color: var(--light-color);
 	
 	padding: 10px;
 }
@@ -356,6 +454,7 @@ h1, h2, h3, h4, h5 {
 	padding: 0 0 10px 25px;
 }
 
+ /* --------------------- showcase gallery --------------------- */
 .showcase-gallery {
 	padding: 10px;
 }
@@ -375,13 +474,14 @@ h1, h2, h3, h4, h5 {
    -ms-transition: all 0.5s ease;
    transition: all 0.5s ease;	
 }
- /* Darkens thumbnail image on mouseover */
+ /* Thumbnail swaps from a circle to a rounded rectangle on mouseover. */
 .showcase-thumbnail:hover {
 	/*-webkit-filter: brightness(50%);
 	filter: brightness(50%);*/
 	border-radius: 10%;
 }
 
+ /* --------------------- showcase gallery popup --------------------- */
 .dialog {
 	 /* Ensures the modal is above the header */
 	z-index: 9999;
@@ -405,15 +505,6 @@ h1, h2, h3, h4, h5 {
 	font-size: 500%;
 	font-weight: bolder;
 	color: var(--light-color);
-	
-	 /* Gives the arrow a dark outline, so it shows up on light backgrounds
-		text-shadow is supported on pretty much every browser since 2012. */
-	text-shadow:
-        -1px -1px 0 var(--dark-color),
-         1px -1px 0 var(--dark-color),
-        -1px  1px 0 var(--dark-color),
-         1px  1px 0 var(--dark-color);
-	
 }
 
  /* carousel-item and carousel-item-image prevents the image getting larger 
@@ -448,10 +539,6 @@ h1, h2, h3, h4, h5 {
  /*
   * Contact Page
   */
-.contact-form-wrapper {
-	display: flex;
-}
-
  /* contract-form and form-group should expand to fill horizontal space */
 .contact-form,
 .form-group {
@@ -464,8 +551,10 @@ h1, h2, h3, h4, h5 {
 .contact-form {
 	padding: 10px;
 	flex-direction: column;
+	flex-grow: 1;
 	
 	margin: auto;
+	width: 100%;
 	max-width: 850px;
 
 	background-color: var(--light-trans);
@@ -531,6 +620,10 @@ h1, h2, h3, h4, h5 {
 		padding-top: 139px;
     }
 	
+	.callout-title {
+		font-size: 250%;
+	}
+	
 	 /* Shrink showcase icon and header text */
 	.card-header-logo {
 		width: 50px;
@@ -591,7 +684,7 @@ h1, h2, h3, h4, h5 {
     	padding-top: 169px;
     }
 	
-	.showcase-techspec {
+	.showcase-quicklook {
 		background-color: var(--dark-color);
 		color: var(--light-color);
 	}
