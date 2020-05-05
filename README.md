@@ -34,7 +34,7 @@ TO DO.
 
 ## Technologies Used
 
-###Web Technologies
+### Web Technologies
 - [HTML5](https://html.spec.whatwg.org/multipage/)
 	- PC flow uses **HTML5** for content and structure.
 - [CSS3](https://www.w3.org/Style/CSS/specs.en.html)
@@ -48,9 +48,9 @@ Bootstrap
 	- PC flow uses **Bootstrap** to aid building responsive layouts and dynamic elements.
 SVG
 - [SVG](https://www.w3.org/Graphics/SVG/)
-	- PC flow uses inline SVG for various theme-able vector graphics, such as icons and logos. 
+	- PC flow uses inline **SVG** for various theme-able vector graphics, such as icons and logos. 
 
-###Developer Tools
+### Developer Tools
 - [Git](https://git-scm.com/)
 	- PC flow uses **Git** for version control.
 - [Github](https://github.com/)
@@ -62,16 +62,16 @@ SVG
 - [Dreamweaver](https://www.adobe.com/uk/products/dreamweaver.html)
 	- PC flow was partially developed using **dreamweaver**.
 
-###Art creation
+### Art creation
 - [Photoshop](https://www.adobe.com/uk/products/photoshop.html)
-	- Photoshop was used for editing photographs.
+	- **Photoshop** was used for editing photographs.
 	- Photos taken with a Canon 5D DSLR camera.
 - [Illustrator](https://www.adobe.com/uk/products/illustrator.html)
-	- Illustrator was used for vector graphics creation such as icons and logos.
+	- **Illustrator** was used for vector graphics creation such as icons and logos.
 
 ## Testing
 
-TODO: document testing.
+TODO: document testing. (manual testing and browser stack)
 
 ## Deployment
 
@@ -79,12 +79,12 @@ The site is deployed to github pages in a separate gh-pages branch. The gh-pages
 
 ## Credits
 
-Logo/Title artwork by Sean Young.
-Logo/Title text based on 01Digitall font by David Chung (free licence) and Flow by Matt Chisholm (Free licence).
-Media icons and menu "hamburger" icon by Sean Young.
-Photographs by Sean Young.
-Web-design by Sean Young.
-HTML and Styling by Sean Young.
-Showcase Gallery code based on example code from https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/ by Diego Vogel
-Showcase Accordion based on example code from https://getbootstrap.com/docs/4.3/components/collapse/
-Menu navbar based on example code from https://getbootstrap.com/docs/4.0/components/navbar/
+- Logo/Title artwork by Sean Young.
+- Logo/Title text based on 01Digitall font by David Chung (free licence) and Flow by Matt Chisholm (Free licence).
+- Media icons and menu "hamburger" icon by Sean Young.
+- Photographs by Sean Young.
+- Web-design by Sean Young.
+- HTML and Styling by Sean Young.
+- Showcase Gallery code based on example code from [CSS Tricks](https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/) by Diego Vogel
+- Showcase Accordion based on example code from [Bootstrap](https://getbootstrap.com/docs/4.3/components/collapse/)
+- Menu navbar based on example code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/)
