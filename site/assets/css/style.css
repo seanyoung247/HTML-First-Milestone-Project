@@ -4,9 +4,10 @@
 
 
 /*
- * TODO: 
- *		 Add default font settings.
- *		 Add expand/collapse icon to accordian.
+ * Possible changes/improvements: 
+ *		 Add expand/collapse icon to showcase as it may not be 
+ *			obvious what the user has to click on to expand content accordian.
+ *
  *       Global scaling of elements on really small screens?
  */
 
@@ -23,6 +24,7 @@
     --dark-color: #1a1a1a;
     --light-trans: rgba(242,242,242,0.85);  /*f2f2f2d8*/
     --dark-trans: rgba(26,26,26,0.85);      /*1a1a1ad8*/
+	--dark-trans-hint: rgba(26,26,26,0.25);
 	--accent-color: #f7931e;
 	--accent-trans: rgba(247,147,30,0.85);	/*f7931ed8*/
     
@@ -47,6 +49,9 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: 'Aldrich', sans-serif;
 }
+h6 {
+	font-weight: bold;
+}
 
  /* Prevents content getting too wide while remaining fluid below 1200px.
     I prefer this behaviour to the container class */
@@ -64,6 +69,14 @@ h1, h2, h3, h4, h5 {
          1px -1px 0 var(--dark-color),
         -1px  1px 0 var(--dark-color),
          1px  1px 0 var(--dark-color);
+}
+
+.thick-outline-text {
+	text-shadow:
+        -2px -2px 0 var(--dark-color),
+         2px -2px 0 var(--dark-color),
+        -2px  2px 0 var(--dark-color),
+         2px  2px 0 var(--dark-color);
 }
 
  /*
@@ -108,6 +121,7 @@ h1, h2, h3, h4, h5 {
     height: 25px;
 }
 
+ /* Themes the hamburger icon SVG */
 .nav-menu_icon_line {
     fill: none;
     stroke: var(--light-color);
@@ -137,6 +151,7 @@ h1, h2, h3, h4, h5 {
     background-color: var(--dark-color);
 }
 
+ /* might be able to achieve this with nth-child selector */
 #nav-item-first {
     border-top: 1px;
     border-bottom: 1px;
@@ -161,7 +176,6 @@ h1, h2, h3, h4, h5 {
  /* hero-content-wrapper stretches to fill page with a flex wrapper.
  	Child elements can then be configured to fill available space or stay
 	at bottom of the page etc.*/
-
 .hero-content-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -184,8 +198,8 @@ h1, h2, h3, h4, h5 {
     background-size: cover;
 }
 
- /* if the page is going to have content below the hero image not just floated over this class pushes it
- 	to full height. If used the footer will be below the bottom of the screen so the page will always scroll */
+ /* if the page is going to have content below the hero image not just floated over, this class ensures it 
+ 	dispalys full height. If used the footer will be below the bottom of the screen so the page will always scroll */
 .full-vh {
 	height: 100vh;
 }
@@ -194,6 +208,7 @@ h1, h2, h3, h4, h5 {
     min-height: 200px;
     background-color: var(--light-color);
     color: var(--dark-color);
+	padding: 10px;
 }
 
  /* If site-content-sections are children of site-content-list they will 
@@ -205,6 +220,18 @@ h1, h2, h3, h4, h5 {
 .site-content-list .site-content-section:nth-child(even){
     background-color: var(--dark-color);
     color: var(--light-color);
+}
+
+.site-link {
+	color: var(--accent-color);
+}
+
+.site-link:hover {
+	color: var(--dark-color);
+	background-color: var(--accent-color);
+	text-decoration: none;
+	
+	border-radius: 0.25em;
 }
 
  /*
@@ -235,7 +262,7 @@ h1, h2, h3, h4, h5 {
     overflow: hidden;
     margin: 0;
 }
- /*makes the list horizontal*/
+ /* makes the list horizontal */
 .media-icons-list li {
     float: left;
     padding: 5px;
@@ -269,7 +296,7 @@ h1, h2, h3, h4, h5 {
 }
 
  /* Child path needs to be styled, but hover event needs to be on the icon's container.
-        Otherwise hover won't work on blank part of path. */
+        Otherwise hover won't work on the blank part of path. */
 .sm-facebook_icon:hover .facebook_icon {
     fill: var(--facebook-color);
 }
@@ -312,7 +339,8 @@ h1, h2, h3, h4, h5 {
 	font-size: 200%;
 	margin: 0.5em 0;
 	
-	/* If uncommented the callout title a lozenge shaped background */
+	/* If uncommented the callout title will have a
+	   lozenge shaped background */
 	/*background-color: var(--dark-trans);
 	border-radius: 1em;
 	padding: 0.25em 0.5em;*/
@@ -356,6 +384,43 @@ h1, h2, h3, h4, h5 {
 .callout-link:hover {
 	text-decoration: none;
 	color: var(--accent-color);
+	background: none;
+}
+
+#watercool-pro-con {
+	color: var(--light-color);
+	background: url("../images/index/waterblock.jpg") no-repeat;
+	background-size: cover;
+	padding: 0;
+}
+#aircool-pro-con {
+	color: var(--light-color);
+	background: url("../images/index/aircooler.jpg") no-repeat;
+	background-size: cover;
+	padding: 0;
+}
+
+.opaque-overlay {
+	background-color: var(--dark-trans);
+	padding: 10px;
+}
+
+.site-pro-con-list {
+	list-style-type: none;
+	list-style-position: inside;
+	
+	margin: 0;
+	padding: 10px 0;
+}
+
+.site-pro-con-list ul li {
+	margin-left: 10px;
+	list-style-type: disc;
+}
+
+.site-pro-con-list ul ul li {
+	margin-left: 20px;
+	list-style-type: circle;
 }
 
  /* 
@@ -535,6 +600,11 @@ h1, h2, h3, h4, h5 {
          1px -1px 0 var(--dark-color),
         -1px  1px 0 var(--dark-color),
          1px  1px 0 var(--dark-color);	
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+	background-color: var(--dark-trans-hint);
 }
  /*
   * Contact Page
