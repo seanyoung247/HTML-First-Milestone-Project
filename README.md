@@ -19,7 +19,7 @@ This website is for PC enthusiasts who are interested in high performance system
 Design documents and source files can be found in the [docs](/docs/) folder.
 
 ### Sitemap
-![site map](/docs/sitemap.png?raw=true)
+![site map](/docs/site-map.png?raw=true)
 
 ### Wireframes
 #### Index (Home)
@@ -44,7 +44,8 @@ Design documents and source files can be found in the [docs](/docs/) folder.
 ![Desktop contact.html](/docs/contact-desktop.png?raw=true)
 
 #### Old Wireframes
-Old showcase.html layout
+**Old showcase.html layout**
+
 ![Mobile showcase.html](/docs/showcase.png?raw=true)
 
 ![Desktop showcase.html](/docs/showcase-desktop.png?raw=true)
