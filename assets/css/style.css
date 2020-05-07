@@ -170,6 +170,11 @@ h6 {
     border-color: var(--light-color);
 }
 
+ /* Just gives a little indication to the user what page they're on. */
+.active {
+	text-decoration: underline;
+}
+
  /*
   * Content section styles
   */
@@ -328,7 +333,7 @@ h6 {
 	text-align: center;
 	
 	/* If uncommented the entire callout will have a 
-	   background*/
+	   background - Left purposfully for future use. */
 	/*padding: 10px;
 	border-radius: 1em;
 	background-color: var(--dark-trans);*/
@@ -340,7 +345,8 @@ h6 {
 	margin: 0.5em 0;
 	
 	/* If uncommented the callout title will have a
-	   lozenge shaped background */
+	   lozenge shaped background - Left purposfully
+	   for future use. */
 	/*background-color: var(--dark-trans);
 	border-radius: 1em;
 	padding: 0.25em 0.5em;*/
@@ -549,8 +555,6 @@ h6 {
 
  /* Thumbnail swaps from a circle to a rounded rectangle on mouseover. */
 .showcase-thumbnail:hover {
-	/*-webkit-filter: brightness(50%);
-	filter: brightness(50%);*/
 	border-radius: 10%;
 }
 
@@ -690,7 +694,7 @@ h6 {
     }
 
     .site-hero-image {
-        background: url("../images/banner/hero-sunrise-lg.jpg") no-repeat center center fixed; /*top no-repeat;*/
+        background: url("../images/banner/hero-sunrise-lg.jpg") no-repeat center center fixed;
         background-size: cover;
     }
 
