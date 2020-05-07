@@ -45,7 +45,9 @@ Design documents and wireframes can be found in the [docs](/docs/) folder.
 
 #### Old Wireframes
 **Old showcase.html layout**
+
 [Mobile showcase.html](/docs/showcase.png)
+
 [Desktop showcase.html](/docs/showcase-desktop.png)
 
 ## Features
@@ -136,7 +138,7 @@ The home page has a simple single column layout on all screens. On wider screens
 to 1200px width to aid readability.
 
 #### Showcase page
-On small screens the showcase page displays a single accordian stretching full width. If the screen is
+On small screens the showcase page displays a single accordion stretching full width. If the screen is
 higher than the content the content is centred vertically, otherwise it takes up the full page height.
 The individual showcase sections are shown one at a time in a single full width column. On wider screens
 the showcase sections have a full width three column layout. The Gallery grows from one image per-row, to
@@ -148,7 +150,7 @@ small screens the image caption is not displayed. On larger screens it is fixed 
 
 #### Contact page
 On small screens the contact form takes up full content height in a single horizontally centred column. On
-larger screens the form has a two column layout centred horizontall and vertically with a maximum total width
+larger screens the form has a two column layout centred horizontally and vertically with a maximum total width
 of 850px to aid focus and readability.
 
 ### Testing process
@@ -208,63 +210,63 @@ final deployment on numerous browsers and devices:
 	1. Load [page] (index.html, showcase.html, contact.html).
 	2. Resize site width:
 		1. Minimum break-point (220px), verify:
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Small logo used
 			- Menu navbar is not displayed
 			- Menu 'hamburger icon' is visible and toggles menu dropdown
 			- No horizontal overflow
 		2. Large phone break-point (450px), verify:
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Large logo used
 			- Menu navbar is not displayed
 			- Menu 'hamburger icon' is visible and toggles menu dropdown
 			- No horizontal overflow
 		3. Medium break-point (768px), verify:
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Menu 'hamburger icon' is not displayed
 			- Menu navbar is visible
 		4. Above maximum break-point (1200px), verify:
 			- Header content doesn't grow beyond 1200px width
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 
 - Footer, for each [page]:
 	1. Load [page] (index.html, showcase.html, contact.html)
 	2. Resize site width:
 		1. Minimum break-point (220px), verify:
 			- All footer text and icons remain in one line
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 		2. Above maximum break-point (1200px), verify:
 			- Footer content doesn't grow beyond 1200px width
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 
 - Home page
 	1. Load home page
 	2. Resize site width:
 		1. Minimum break-point (220px), verify:
 			- Content doesn't overflow horizontally
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 		2. Above maximum break-point (1200px), verify:
 			- Content doesn't grow beyond 1200px width
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 
 - Showcase page
 	1. Load showcase page
 	2. Resize site width:
 		1. Minimum break-point (220px), verify:
 			- Content doesn't overflow horizontally
-			- Background images and colors stretch to full width
-			- Showcase sections have correct single coloumn layout
+			- Background images and colours stretch to full width
+			- Showcase sections have correct single column layout
 			- Each showcase section is laid out in the correct order
 			- Page scales vertically so all content can be seen or scrolled to
 		2. Medium breakpoint (768px), verify:
 			- Content doesn't overflow horizontally
-			- Background images and colors stretch to full width
-			- Showcase sections have correct two coloumn layout
+			- Background images and colours stretch to full width
+			- Showcase sections have correct two column layout
 			- Each showcase section is laid out in the correct order
 			- Page scales vertically so all content can be seen or scrolled to
 		3. Above maximum break-point (1200px), verify:
 			- Content doesn't grow beyond 1200px width
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Page scales vertically so all content can be seen or scrolled to
 
 - Contact page
@@ -272,17 +274,17 @@ final deployment on numerous browsers and devices:
 	2. Resize site width:
 		1. Minimum break-point (220px), verify:
 			- Content doesn't overflow horizontally
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Form has correct single column layout
 			- Page scales vertically so all content can be seen or scrolled to
 		2. Medium break-point (768px), verify:
 			- Content doesn't overflow horizontally
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Form has correct two column layout
 			- Page scales vertically so all content can be seen or scrolled to
 		3. Maximum break-point (850px), verify:
 			- Content doesn't grow beyond 1200px width
-			- Background images and colors stretch to full width
+			- Background images and colours stretch to full width
 			- Page scales vertically so all content can be seen or scrolled to
 	
 #### Devices
@@ -301,7 +303,7 @@ final deployment on numerous browsers and devices:
 - Showcase page:
 	1. Load showcase page
 	2. Verify showcase page content is laid out according to design with no horizontal overflow.
-	3. For each showcase section verigy content laid out according to design with no horizontal overflow.
+	3. For each showcase section verify content laid out according to design with no horizontal overflow.
 	
 - Contact page:
 	1. Load contact page
@@ -316,7 +318,7 @@ final deployment on numerous browsers and devices:
 
 NOTE: Form backend is not currently implemented
 
-### Miscelaneous testing
+### Miscellaneous testing
 [Markdown live preview](https://markdownlivepreview.com/) and 
 [Markdown Editor](https://jbt.github.io/markdown-editor/) were used for checking the README.md file before 
 committing.
@@ -329,9 +331,9 @@ committing.
 The development repository is in the following structure:
 ~~~
 .
-+-- docs					(design files, wireframes etc.)
-¦   +-- code-institute		(submission guidlines)
-+-- site					(site root)
++-- docs				(design files, wireframes etc.)
+¦   +-- code-institute			(submission guidelines)
++-- site				(site root)
 ¦   +-- assets
 ¦       +-- css
 ¦       +-- images
@@ -340,7 +342,7 @@ The development repository is in the following structure:
 ¦           +-- showcase 
 ¦               +-- chameleon
 ¦               +-- gecko
-+-- source			(files used to create website content)
++-- source				(files used to create website content)
     +-- artwork
     +-- photos
     ¦   +-- edited
@@ -350,8 +352,11 @@ The development repository is in the following structure:
 ~~~
 
 docs/ contains design documents.
+
 site/ is site root.
+
 source/ contains files used to generate site content, artwork and tests.
+
 
 The site is deployed to github pages in a separate gh-pages branch with development files removed i.e. just the 
 contents of the /site/ directory deployed to root.
