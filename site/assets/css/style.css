@@ -151,8 +151,8 @@ h6 {
     background-color: var(--dark-color);
 }
 
- /* might be able to achieve this with nth-child selector */
-#nav-item-first {
+ /* Bit more elegant (and less labour intensive) than using an ID */
+.nav-item:first-child {
     border-top: 1px;
     border-bottom: 1px;
     border-left: 0;
@@ -446,9 +446,16 @@ h6 {
 }
 
 .card-header,
+.card-header:hover {
+	 /* Makes it a bit more obvious that this is an interactive item. */
+	text-decoration: none;
+	color: var(--dark-color);
+}
+
+.card-header,
 .card .collapse {	
 	padding: 5px;
-	margins: 0;
+	margin: 0;
 }
 
 .card-toggle {
@@ -539,6 +546,7 @@ h6 {
    -ms-transition: all 0.5s ease;
    transition: all 0.5s ease;	
 }
+
  /* Thumbnail swaps from a circle to a rounded rectangle on mouseover. */
 .showcase-thumbnail:hover {
 	/*-webkit-filter: brightness(50%);
@@ -731,16 +739,15 @@ h6 {
     .navbar-wrapper {
         width: 100%;
     }
-
-    #nav-item-first {
-        border-top: 0;
+	
+	.nav-item:first-child {
+		border-top: 0;
         border-bottom: 0;
         border-left: 1px;
         border-right: 1px;
         border-style: solid;
         border-color: var(--light-color);
-    }
-
+	}
     .nav-item {
         border-top: 0;
         border-bottom: 0;

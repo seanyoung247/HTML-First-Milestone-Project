@@ -16,39 +16,37 @@ This website is for PC enthusiasts who are interested in high performance system
 
 [Design document](/docs/design.pdf).
 
-Design documents and source files can be found in the [docs](/docs/) folder.
+Design documents and wireframes can be found in the [docs](/docs/) folder.
 
 ### Sitemap
-![site map](/docs/site-map.png?raw=true)
+[site map](/docs/site-map.png)
 
 ### Wireframes
 #### Index (Home)
 ##### Mobile
-![Mobile index.html](/docs/index.png?raw=true)
+[Mobile index.html](/docs/index.png)
 
 ##### Desktop
-![Desktop index.html](/docs/index-desktop.png?raw=true)
+[Desktop index.html](/docs/index-desktop.png)
 
 #### Showcase
 ##### Mobile
-![Mobile showcase.html](/docs/showcase-alt.png?raw=true)
+[Mobile showcase.html](/docs/showcase-alt.png)
 
 ##### Desktop
-![Mobile showcase.html](/docs/showcase-desktop-alt.png?raw=true)
+[Mobile showcase.html](/docs/showcase-desktop-alt.png)
 
 #### Contact
 ##### Mobile
-![Mobile contact.html](/docs/contact.png?raw=true)
+[Mobile contact.html](/docs/contact.png)
 
 ##### Desktop
-![Desktop contact.html](/docs/contact-desktop.png?raw=true)
+[Desktop contact.html](/docs/contact-desktop.png)
 
 #### Old Wireframes
 **Old showcase.html layout**
-
-![Mobile showcase.html](/docs/showcase.png?raw=true)
-
-![Desktop showcase.html](/docs/showcase-desktop.png?raw=true)
+[Mobile showcase.html](/docs/showcase.png)
+[Desktop showcase.html](/docs/showcase-desktop.png)
 
 ## Features
 
@@ -154,6 +152,11 @@ larger screens the form has a two column layout centred horizontall and vertical
 of 850px to aid focus and readability.
 
 ### Testing process
+During research I found QVGA (240px wide) is the minimum screen size found on the modern web. Due to this the
+minimum width for testing is 220px.
+
+All HTML files were run through the [W3C Validator](https://validator.w3.org/) prior to live testing.
+
 Each element was tested for functionality during the development process. The following steps were also taken before 
 final deployment on numerous browsers and devices:
 
@@ -174,7 +177,9 @@ final deployment on numerous browsers and devices:
 	4. Click "Showcase" and verify it loads the showcase page (showcase.html). Return to [page].
 	5. Click "Contact" and verify it loads the contact page (contact.html).
 	
-- Footer (Social media icons not yet implimented).
+- Footer, for each [page]:
+	1. Load [page] (index.html, showcase.html, contact.html)
+	2. Click each social media icon and verify it loads the correct platform in a new tab.
 
 - Home page:
 	1. Load home page
@@ -312,7 +317,8 @@ final deployment on numerous browsers and devices:
 NOTE: Form backend is not currently implemented
 
 ### Miscelaneous testing
-[Markdown live preview](https://markdownlivepreview.com/) was used for checking the README.md file before 
+[Markdown live preview](https://markdownlivepreview.com/) and 
+[Markdown Editor](https://jbt.github.io/markdown-editor/) were used for checking the README.md file before 
 committing.
 
 ### Known issues:
@@ -320,14 +326,55 @@ committing.
 
 ## Deployment
 
-The site is deployed to github pages in a separate gh-pages branch.
+The development repository is in the following structure:
+~~~
+.
++-- docs					(design files, wireframes etc.)
+¦   +-- code-institute		(submission guidlines)
++-- site					(site root)
+¦   +-- assets
+¦       +-- css
+¦       +-- images
+¦           +-- banner
+¦           +-- index
+¦           +-- showcase 
+¦               +-- chameleon
+¦               +-- gecko
++-- source			(files used to create website content)
+    +-- artwork
+    +-- photos
+    ¦   +-- edited
+    ¦   ¦   +-- gallery
+    ¦   +-- raw
+    +-- test
+~~~
+
+docs/ contains design documents.
+site/ is site root.
+source/ contains files used to generate site content, artwork and tests.
+
+The site is deployed to github pages in a separate gh-pages branch with development files removed i.e. just the 
+contents of the /site/ directory deployed to root.
+
+gh-pages repository:
+~~~
+.
++-- assets
+    +-- css
+    +-- images
+        +-- banner
+        +-- index
+        +-- showcase 
+            +-- chameleon
+            +-- gecko
+~~~
 
 The gh-pages branch was created in the github repository settings and deployed to using the command: 
 >git subtree push --prefix site origin gh-pages
 
 ## Credits
 
-###Content
+### Content
 - All text by Sean Young.
 - Web-design by Sean Young.
 - HTML and Styling by Sean Young.
