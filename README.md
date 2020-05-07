@@ -158,6 +158,7 @@ During research I found QVGA (240px wide) is the minimum screen size found on th
 minimum width for testing is 220px.
 
 All HTML files were run through the [W3C Validator](https://validator.w3.org/) prior to live testing.
+CSS files were run through the [W3C Validator](https://jigsaw.w3.org/css-validator/) prior to live testing.
 
 Each element was tested for functionality during the development process. The following steps were also taken before 
 final deployment on numerous browsers and devices:
@@ -325,6 +326,9 @@ committing.
 
 ### Known issues:
 - At minimum break point (220px width) some header text overflows it's padding on index.html.
+- style.css doesn't complete validation due to the use of custom properties. Custom properties 
+are a widely used part of the CSS3 standard, this is a well known problem with the W3C validator,
+so can be safely ignored.
 
 ## Deployment
 
