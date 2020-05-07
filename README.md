@@ -392,5 +392,5 @@ The gh-pages branch was created in the github repository settings and deployed t
 
 ### Acknowledgements
 - Showcase Gallery code based on example code from [CSS Tricks](https://css-tricks.com/creating-a-modal-image-gallery-with-bootstrap-components/) by Diego Vogel
-- Showcase Accordion based on example code from [Bootstrap](https://getbootstrap.com/docs/4.3/components/collapse/)
+- Showcase Accordion based on example code from [Bootstrap](https://getbootstrap.com/docs/4.3/components/collapse/#accordion-example)
 - Menu navbar based on example code from [Bootstrap](https://getbootstrap.com/docs/4.0/components/navbar/)
